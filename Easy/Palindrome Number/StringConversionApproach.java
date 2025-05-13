@@ -1,4 +1,4 @@
-class StringCOnversionApproach { // Class name matches the file name
+public class StringCOnversionApproach { // Class name matches the file name
 
     public static void main(String[] args) {
         int x1 = 121;
