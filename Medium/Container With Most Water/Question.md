@@ -17,21 +17,8 @@ Note: You may not slant the container.
 Visual Representation
 Here's a visual representation of the input array height = [1,8,6,2,5,4,8,3,7]:
 
-markdown
-Copy
-Edit
+![Alt text](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg)
 
-|                             |                                      
-|     |                       |                                      
-|     |         |             |                                      
-|     |         |     |       |                                      
-|     | |       |     |       |                                      
-|     | |   |   |     |   |   |                                      
-|     | |   |   | |   |   |   |                                      
-|     | |   |   | |   |   |   |                                      
-|     | |   |   | |   |   |   |                                      
-|_____|_|___|___|_|___|___|___|____                                  
-  0   1   2   3   4   5   6   7   8
 In this diagram, each vertical bar represents the height at that index in the array. The goal is to select two lines that, together with the x-axis, form a container that holds the most water.
 neetcode.io
 
