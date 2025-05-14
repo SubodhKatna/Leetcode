@@ -1,6 +1,5 @@
 public class OptimizedApproach {
     public static void main(String[] args) {
-        int[] height = { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
 
         int[] height1 = { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
         System.out.println("Test Case 1: " + maxArea(height1)); // Expected: 49
