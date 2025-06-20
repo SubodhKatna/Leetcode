@@ -1,43 +1,97 @@
-Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+# 🔁 Roman to Integer
 
-Symbol       Value
-I             1
-V             5
-X             10
-L             50
-C             100
-D             500
-M             1000
-For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.
+This repository provides a solution to the **"Roman to Integer"** problem — a common algorithmic question involving string parsing and numeral systems.
 
-Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
+---
 
-I can be placed before V (5) and X (10) to make 4 and 9. 
-X can be placed before L (50) and C (100) to make 40 and 90. 
-C can be placed before D (500) and M (1000) to make 400 and 900.
-Given a roman numeral, convert it to an integer.
+## 🧩 Problem Statement
 
- 
+Roman numerals are represented by seven different symbols:
 
-Example 1:
+| Symbol | Value |
+|--------|-------|
+| I      | 1     |
+| V      | 5     |
+| X      | 10    |
+| L      | 50    |
+| C      | 100   |
+| D      | 500   |
+| M      | 1000  |
 
-Input: s = "III"
-Output: 3
-Explanation: III = 3.
-Example 2:
+For example:
 
-Input: s = "LVIII"
-Output: 58
-Explanation: L = 50, V= 5, III = 3.
-Example 3:
+- `II` = 2  
+- `XII` = 12  
+- `XXVII` = 27  
 
-Input: s = "MCMXCIV"
-Output: 1994
-Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
- 
+Normally, Roman numerals are written from largest to smallest left to right. However, **subtractive notation** is used in the following six cases:
 
-Constraints:
+- `IV` = 4 → (I before V)
+- `IX` = 9 → (I before X)
+- `XL` = 40 → (X before L)
+- `XC` = 90 → (X before C)
+- `CD` = 400 → (C before D)
+- `CM` = 900 → (C before M)
 
-1 <= s.length <= 15
-s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
-It is guaranteed that s is a valid roman numeral in the range [1, 3999].
+---
+
+## 🧠 Examples
+
+### Example 1
+
+```
+Input:  s = "III"  
+Output: 3  
+Explanation: III = 3
+```
+
+### Example 2
+
+```
+Input:  s = "LVIII"  
+Output: 58  
+Explanation: L = 50, V = 5, III = 3
+```
+
+### Example 3
+
+```
+Input:  s = "MCMXCIV"  
+Output: 1994  
+Explanation: M = 1000, CM = 900, XC = 90, IV = 4
+```
+
+---
+
+## 🔒 Constraints
+
+- `1 <= s.length <= 15`
+- `s` contains only characters: `'I'`, `'V'`, `'X'`, `'L'`, `'C'`, `'D'`, `'M'`
+- It is guaranteed that `s` is a **valid Roman numeral** in the range `[1, 3999]`
+
+---
+
+## ✅ Approach
+
+- Use a hash map to store Roman numeral values.
+- Traverse the string from left to right.
+- If the current character represents a value **less than the next one**, subtract it.
+- Otherwise, add it.
+
+**Time Complexity:** `O(n)`  
+**Space Complexity:** `O(1)`
+
+---
+
+## 📌 Notes
+
+- Subtraction is only used in valid combinations (e.g., `IV`, not `IL` or `IC`).
+- This problem is a great practice in both **string traversal** and **conditional logic**.
+
+---
+
+## 📂 Related Topics
+
+- Strings  
+- Hash Maps  
+- Math  
